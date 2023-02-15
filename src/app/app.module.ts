@@ -11,6 +11,7 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {FormsModule} from "@angular/forms";
 import {InMemoryDataService} from "./in-memory-data.service";
 import { EventsComponent } from './events/events.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EventsComponent } from './events/events.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
