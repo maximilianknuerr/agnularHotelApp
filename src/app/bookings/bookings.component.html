@@ -1,0 +1,13 @@
+
+
+<div class="list-group mt-2" *ngFor="let booking of bookings">
+  <div  class="mb-2 list-group-item ">
+    <div class="d-flex w-100 justify-content-between">
+      <a routerLink="/edit/{{booking.id}}" class="text-decoration-none h5 mb-1">{{booking.name}}</a>
+      <button (click)="deleteBooking(booking)" class="btn btn-sm btn-danger">x</button>
+<!--      <small class="text-muted">{{booking.id}}</small>-->
+    </div>
+    <p class="mb-1">{{booking.startDate | date: 'dd/MM/yy'}} - {{booking.endDate  | date: 'dd/MM/yy'}}<p>
+    <small class="text-muted">{{booking.roomNumber}}</small>
+  </div>
+</div>
